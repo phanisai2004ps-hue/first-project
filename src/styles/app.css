@@ -1,0 +1,300 @@
+/* Google Fonts imported in HTML: Fredoka, Outfit, Creepster, Courier Prime */
+
+:root {
+  --color-pink-soft: #ffb7d5;
+  --color-pink-deep: #ff6b9d;
+  --color-lavender: #d8b4fe;
+  --color-babyblue: #bae6fd;
+  --color-mint: #a7f3d0;
+  --color-cream: #fff5f8;
+}
+
+body {
+  font-family: 'Fredoka', 'Outfit', sans-serif;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Cute Pastel Mesh Background */
+.cute-bg-mesh {
+  background: 
+    radial-gradient(at 10% 20%, rgba(255, 182, 193, 0.6) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(216, 180, 254, 0.6) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(186, 230, 253, 0.6) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(254, 215, 226, 0.7) 0px, transparent 50%),
+    linear-gradient(135deg, #fce7f3 0%, #ede9fe 50%, #e0f2fe 100%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 40px -15px rgba(255, 107, 157, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-inner {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.glass-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 240, 246, 0.85));
+  box-shadow: 0 6px 16px -4px rgba(255, 107, 157, 0.18), inset 0 2px 3px rgba(255, 255, 255, 0.9);
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.glass-button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 20px -4px rgba(255, 107, 157, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.95);
+}
+
+.glass-button:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 2px 6px rgba(255, 107, 157, 0.2);
+}
+
+.operator-button {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  color: white;
+  box-shadow: 0 8px 18px -4px rgba(236, 72, 153, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.4);
+}
+
+.operator-button:hover {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 24px -4px rgba(236, 72, 153, 0.5);
+}
+
+.special-button {
+  background: linear-gradient(135deg, #c084fc, #a855f7);
+  color: white;
+  box-shadow: 0 8px 18px -4px rgba(168, 85, 247, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.4);
+}
+
+.equals-button {
+  background: linear-gradient(135deg, #fb7185, #f43f5e);
+  color: white;
+  box-shadow: 0 10px 24px -4px rgba(244, 63, 94, 0.5), inset 0 2px 3px rgba(255, 255, 255, 0.5);
+  animation: cutePulse 3s infinite ease-in-out;
+}
+
+@keyframes cutePulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 10px 24px -4px rgba(244, 63, 94, 0.4); }
+  50% { transform: scale(1.02); box-shadow: 0 14px 28px -2px rgba(244, 63, 94, 0.6); }
+}
+
+/* Floating Animations */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+@keyframes mascotBob {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.02); }
+}
+
+.animate-mascot {
+  animation: mascotBob 3.2s ease-in-out infinite;
+}
+
+/* Sparkle Particle on Click */
+.sparkle-burst {
+  position: absolute;
+  pointer-events: none;
+  animation: sparkleFly 0.65s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes sparkleFly {
+  0% { transform: scale(0) translate(0, 0); opacity: 1; }
+  100% { transform: scale(1.4) translate(var(--tx), var(--ty)); opacity: 0; }
+}
+
+/* ========================================================= */
+/* HORROR ANIMATIONS AND EFFECTS */
+/* ========================================================= */
+
+.font-horror {
+  font-family: 'Creepster', cursive;
+}
+
+.font-terminal {
+  font-family: 'Courier Prime', monospace;
+}
+
+/* Screen Shake Effect */
+@keyframes violentShake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-12px, -8px) rotate(-1.5deg); }
+  20% { transform: translate(14px, 10px) rotate(2deg); }
+  30% { transform: translate(-16px, 6px) rotate(-1deg); }
+  40% { transform: translate(10px, -12px) rotate(1.5deg); }
+  50% { transform: translate(-8px, 14px) rotate(-2deg); }
+  60% { transform: translate(12px, -6px) rotate(1deg); }
+  70% { transform: translate(-10px, -10px) rotate(-1deg); }
+  80% { transform: translate(14px, 8px) rotate(1.5deg); }
+  90% { transform: translate(-6px, 10px) rotate(-0.5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.horror-shake {
+  animation: violentShake 0.15s infinite;
+}
+
+/* Screen Glitch & Flicker */
+@keyframes screenGlitch {
+  0% {
+    filter: invert(0%) hue-rotate(0deg) contrast(1);
+    transform: translate(0);
+  }
+  15% {
+    filter: invert(100%) hue-rotate(180deg) contrast(2);
+    transform: translate(-5px, 3px);
+  }
+  20% {
+    filter: invert(0%) hue-rotate(0deg) contrast(1.2);
+    transform: translate(4px, -2px);
+  }
+  35% {
+    filter: invert(40%) hue-rotate(90deg) contrast(1.8) saturate(3);
+    transform: translate(-3px, -4px);
+  }
+  40% {
+    filter: invert(0%);
+    transform: translate(0);
+  }
+  60% {
+    filter: invert(80%) saturate(4) contrast(3);
+    transform: translate(6px, 2px);
+  }
+  75% {
+    filter: invert(0%) contrast(1.5);
+    transform: translate(-2px, 3px);
+  }
+  100% {
+    filter: invert(0%);
+    transform: translate(0);
+  }
+}
+
+.horror-glitch-stage1 {
+  animation: screenGlitch 0.35s infinite;
+}
+
+/* Chromatic Aberration Text Effect */
+.chromatic-text {
+  position: relative;
+  text-shadow: 
+    -3px 0 2px rgba(255, 0, 50, 0.9),
+     3px 0 2px rgba(0, 220, 255, 0.9),
+     0 0 15px rgba(255, 0, 0, 0.8);
+  animation: chromaticJitter 0.18s infinite;
+}
+
+@keyframes chromaticJitter {
+  0% { transform: translate(0); }
+  25% { transform: translate(-2px, 1px); }
+  50% { transform: translate(2px, -1px); }
+  75% { transform: translate(-1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Ghost Rapid Zoom In */
+@keyframes ghostJumpscareZoom {
+  0% {
+    transform: scale(0.2) translateY(50px);
+    opacity: 0;
+    filter: brightness(0.2) contrast(2);
+  }
+  40% {
+    transform: scale(0.7) translateY(10px);
+    opacity: 0.8;
+    filter: brightness(0.6) contrast(1.8);
+  }
+  70% {
+    transform: scale(1.15) translateY(-5px);
+    opacity: 1;
+    filter: brightness(1.2) contrast(1.5);
+  }
+  85% {
+    transform: scale(1.3) translateY(0);
+    filter: brightness(1.6) contrast(2) drop-shadow(0 0 35px rgba(255,0,0,0.9));
+  }
+  100% {
+    transform: scale(1.08) translateY(0);
+    opacity: 1;
+    filter: brightness(1) contrast(1.2) drop-shadow(0 0 25px rgba(255, 20, 20, 0.7));
+  }
+}
+
+.animate-ghost-jumpscare {
+  animation: ghostJumpscareZoom 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Ghost Hover / Breathe Idle in Climax */
+@keyframes ghostLurk {
+  0%, 100% { transform: scale(1.08) translateY(0) rotate(0deg); }
+  50% { transform: scale(1.12) translateY(-12px) rotate(0.8deg); }
+}
+
+.animate-ghost-lurk {
+  animation: ghostLurk 3s ease-in-out infinite;
+}
+
+/* CRT Scanlines Overlay */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  ), 
+  linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.05),
+    rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.05)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Blood Red Dark Vignette */
+.horror-vignette {
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 30%,
+    rgba(139, 0, 0, 0.45) 70%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+/* Creepy Pulse Glow */
+@keyframes demonicGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), inset 0 0 30px rgba(180, 0, 0, 0.4); }
+  50% { box-shadow: 0 0 50px rgba(255, 0, 0, 0.9), inset 0 0 60px rgba(255, 0, 0, 0.7); }
+}
+
+.demonic-glow {
+  animation: demonicGlow 1.2s infinite ease-in-out;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  .horror-shake, .horror-glitch-stage1, .sparkle-burst, .animate-float, .animate-mascot {
+    animation: none !important;
+  }
+}
+
+.reduced-motion-active * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}

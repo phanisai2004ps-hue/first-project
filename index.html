@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuteCalc 👻 — Love at First Calculation, Fear at First Result</title>
+  <meta name="description" content="Aesthetic pastel calculator with glassmorphic cards, cute animated mascot, and a secret cinematic horror jumpscare twist. Cute on the outside. Haunted on the inside. 💖👻">
+  <meta name="theme-color" content="#fce7f3">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👻</text></svg>">
+
+  <!-- Google Fonts: Fredoka (Cute UI), Outfit (Modern sans), Creepster (Horror), Courier Prime (Terminal) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Creepster&family=Fredoka:wght@300..700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            fredoka: ['Fredoka', 'sans-serif'],
+            outfit: ['Outfit', 'sans-serif'],
+            horror: ['Creepster', 'cursive'],
+            terminal: ['Courier Prime', 'monospace'],
+          },
+          colors: {
+            pastel: {
+              pink: '#ffb7d5',
+              lavender: '#d8b4fe',
+              blue: '#bae6fd',
+              cream: '#fff5f8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- App Custom Styles (Glassmorphism, animations, keyframes) -->
+  <link rel="stylesheet" href="/src/styles/app.css">
+
+  <!-- React 18 & ReactDOM 18 UMD -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body class="bg-[#fce7f3] min-h-screen">
+  <!-- Root React App Mount Container -->
+  <div id="root"></div>
+
+  <!-- CuteCalc Application Bundle -->
+  <script src="/dist/bundle.js"></script>
+</body>
+</html>

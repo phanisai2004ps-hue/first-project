@@ -1,0 +1,23 @@
+{
+  "name": "cutecalc",
+  "version": "1.0.0",
+  "description": "CuteCalc 👻 — Love at First Calculation, Fear at First Result. Cute pastel calculator with a cinematic horror jumpscare twist.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node build.js",
+    "dev": "node server.js",
+    "test": "node test-app.js"
+  },
+  "keywords": [
+    "calculator",
+    "horror",
+    "jumpscare",
+    "pastel",
+    "glassmorphism",
+    "react",
+    "fun"
+  ],
+  "author": "",
+  "license": "MIT"
+}
